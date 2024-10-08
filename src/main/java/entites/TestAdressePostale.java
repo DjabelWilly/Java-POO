@@ -1,18 +1,11 @@
 package entites;
 
 public class TestAdressePostale {
-    public static void main (String[] args){
-        AdressePostale adr1 = new AdressePostale();
-        AdressePostale adr2 = new AdressePostale();
+    public static void main(String[] args) {
+        AdressePostale adr1 = new AdressePostale(45, "rue Toto", 44000, "Nantes");
+        AdressePostale adr2 = new AdressePostale(2, "rue de la République", 13002, "Marseille");
 
-        adr1.numeroRue = 45;
-        adr1.libelleRue = "avenue Leon Blum";
-        adr1.codePostal = 13001;
-        adr1.ville = "Marseille";
-
-        adr2.numeroRue = 13;
-        adr2.libelleRue = "rue Toto";
-        adr2.codePostal = 34000;
-        adr2.ville = "Montpellier";
     }
+
+
 }

@@ -2,21 +2,27 @@ package entites;
 
 import entites2.Personne;
 
+
 public class TestPersonne {
     public static void main(String[] args) {
-        Personne pers1 = new Personne();
-        Personne pers2 = new Personne();
 
-        pers1.nom = "Truc";
-        pers1.prenom = "Toto";
-        pers1.adressePostale = "3 place de marché";
+        // Création d'une adresse postale
+        AdressePostale adr1 = new AdressePostale(13, "place du marché", 75000, "Paris");
 
-        pers2.nom = "Machin";
-        pers2.prenom = "Tutu";
-        pers2.adressePostale = "10 rue Victor Hugo";
+        // Création de deux personnes avec des constructeurs différents
+        Personne pers1 = new Personne("Machin", "Pierre", adr1);
 
-        System.out.println(pers1);
-        System.out.println(pers2);
+
+        pers1.getId();
+        System.out.println(pers1.getAdresse());
+        System.out.println(pers1.getNom());
+        System.out.println(pers1.getPrenom());
+
+        Personne pers2 = new Personne("Toto", "Paul", adr1);
+        pers2.setAdresse(3, "rue Truc", 13200, "Arles");
+        pers1.setNom("Jean");
+        pers2.setPrenom("Titi");
+
     }
-
 }
+
